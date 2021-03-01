@@ -1,12 +1,18 @@
 const textarea = document.querySelector('.decrypter__cipher-text'),
     decryptBtn = document.querySelector('.decrypt'),
-    result = document.querySelector('.decrypter__result-text'),
+    resultInput = document.querySelector('.decrypter__result-text'),
     copyBtn = document.querySelector('.select'),
-    clearBtn = document.querySelector('.clear');
+    clearBtn = document.querySelector('.clear'),
+    regExp = /([a-z])\1{1}/g;
 
 edwardDecrypt = (message) => {
-    const regExp = /([a-z])\1{1}/g;
-    result.value = message.replace(regExp, '');
+    let result = message;
+
+    while (result.search(regExp) !== -1) {
+        result = result.replace(regExp, '')
+    }
+
+    resultInput.value = result;
 }
 
 select = () => {
