@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.decrypter {
+    margin: 3rem;
+}
+
+.decrypter__cipher {
+    margin-bottom: 1rem;
+}
+
+.decrypter__cipher-text,
+.decrypter__result-text,
+.button {
+    font-size: 1.4rem;
+}
+
+.decrypter__button__wrapper {
+    margin-bottom: 2rem;
+}
+
+.decrypter__result {
+    margin-bottom: 1rem;
+}
+
+b {
+    font-size: 2rem;
+}
