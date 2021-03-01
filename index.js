@@ -4,9 +4,9 @@ const textarea = document.querySelector('.decrypter__cipher-text'),
     copyBtn = document.querySelector('.select'),
     clearBtn = document.querySelector('.clear');
 
-edwardDecrypt = () => {
+edwardDecrypt = (message) => {
     const regExp = /([a-z])\1{1}/g;
-    result.value = textarea.value.replace(regExp, '');
+    result.value = message.replace(regExp, '');
 }
 
 select = () => {
@@ -19,6 +19,6 @@ clear = () => {
     textarea.focus();
 }
 
-decryptBtn.addEventListener('click', edwardDecrypt);
+decryptBtn.addEventListener('click', () => edwardDecrypt(textarea.value));
 copyBtn.addEventListener('click', select);
 clearBtn.addEventListener('click', clear);
