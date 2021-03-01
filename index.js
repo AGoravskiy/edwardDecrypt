@@ -16,11 +16,11 @@ edwardDecrypt = (message) => {
 }
 
 select = () => {
-    result.select();
+    resultInput.select();
 }
 
 clear = () => {
-    result.value = '';
+    resultInput.value = '';
     textarea.value = '';
     textarea.focus();
 }
